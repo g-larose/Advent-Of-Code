@@ -8,4 +8,24 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="secret.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="2016\" />
+    <Folder Include="2017\" />
+    <Folder Include="2018\" />
+    <Folder Include="2019\" />
+    <Folder Include="2020\" />
+    <Folder Include="2021\" />
+    <Folder Include="2022\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+
 </Project>
