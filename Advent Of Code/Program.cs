@@ -1,4 +1,4 @@
-﻿using Advent_Of_Code._2015.Day6;
+﻿using Advent_Of_Code._2020.Day2;
 
 namespace Advent_Of_Code
 {
@@ -6,9 +6,9 @@ namespace Advent_Of_Code
     {
         static void Main(string[] args)
         {
-            var day = new Day6();
+            var day = new Day2();
 
-            Console.WriteLine($"Part One: {day.Part_One()}\r\nPart Two : {day.Part_Two()}");
+            //Console.WriteLine($"Part One: {day.Part_One()}\r\nPart Two : {day.Part_Two()}");
 
             Console.ReadKey();
         }

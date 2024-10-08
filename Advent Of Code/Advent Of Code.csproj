@@ -10,22 +10,21 @@
 
   <ItemGroup>
     <None Update="secret.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="2016\" />
     <Folder Include="2017\" />
     <Folder Include="2018\" />
     <Folder Include="2019\" />
-    <Folder Include="2020\" />
     <Folder Include="2021\" />
     <Folder Include="2022\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="SuperLinq" Version="6.1.0" />
   </ItemGroup>
 
 </Project>

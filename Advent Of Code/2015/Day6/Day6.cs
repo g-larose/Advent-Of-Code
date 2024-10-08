@@ -19,13 +19,26 @@ namespace Advent_Of_Code._2015.Day6
         {
             var inputCommands = Input.ToLines().ToList();
             var details = inputCommands.Select(x =>x.SplitBy(" ").ToList());
-            var commands = new List<(string command, string distance, int x, int y)>();
+            var commands = new List<(string command, (int x, int y), (int x, int y))>();
+
+
             foreach (var detail in details)
             {
-                var posX = int.Parse(detail[2].Split(',')[0]);
-                var posY = int.Parse(detail[4].Split(',')[1]);
-                commands.Add((detail[1], detail[3], posX, posY));
+                if (detail.Count() > 4)
+                {
+                    var posX = int.Parse(detail[2].Split(',')[0]);
+                    var posY = int.Parse(detail[2].Split(',')[1]);
+                    commands.Add((detail[1], (posX, posY), (posX, posY)));
+                }
+                else
+                {
+                    var posX = int.Parse(detail[1].Split(',')[0]);
+                    var posY = int.Parse(detail[3].Split(',')[1]);
+                    commands.Add((detail[0], (posX, posY), (posX, posY)));
+                }
+                    
             }
+
             return 1;
         }
 
